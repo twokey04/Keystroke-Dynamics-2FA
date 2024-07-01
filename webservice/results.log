@@ -1,0 +1,187 @@
+[RESULT] Real user: 1 | Predicted user: 1 | Algorithm: SVM | Match: True | Date of execution: 11/06/2024 22:07:04
+[RESULT] Real user: 1 | Predicted user: 1 | Algorithm: KNN Manhattan | Match: True | Date of execution: 11/06/2024 22:07:04
+[RESULT] Real user: 1 | Predicted user: 1 | Algorithm: KNN Euclidean | Match: True | Date of execution: 11/06/2024 22:07:04
+[RESULT] Real user: 1 | Predicted user: 4 | Algorithm: LSTM | Match: False | Date of execution: 11/06/2024 22:07:04
+[RESULT] Real user: 1 | Predicted user: 1 | Algorithm: HMM | Match: True | Date of execution: 11/06/2024 22:07:04
+[RESULT] Real user: 1 | Predicted user: 1 | Algorithm: SVM | Match: True | Date of execution: 11/06/2024 22:08:39
+[RESULT] Real user: 1 | Predicted user: 1 | Algorithm: KNN Manhattan | Match: True | Date of execution: 11/06/2024 22:08:39
+[RESULT] Real user: 1 | Predicted user: 1 | Algorithm: KNN Euclidean | Match: True | Date of execution: 11/06/2024 22:08:39
+[RESULT] Real user: 1 | Predicted user: 5 | Algorithm: LSTM | Match: False | Date of execution: 11/06/2024 22:08:39
+[RESULT] Real user: 1 | Predicted user: 1 | Algorithm: HMM | Match: True | Date of execution: 11/06/2024 22:08:39
+[RESULT] Real user: 1 | Predicted user: 1 | Algorithm: SVM | Match: True | Date of execution: 11/06/2024 22:09:07
+[RESULT] Real user: 1 | Predicted user: 1 | Algorithm: KNN Manhattan | Match: True | Date of execution: 11/06/2024 22:09:07
+[RESULT] Real user: 1 | Predicted user: 1 | Algorithm: KNN Euclidean | Match: True | Date of execution: 11/06/2024 22:09:07
+[RESULT] Real user: 1 | Predicted user: 5 | Algorithm: LSTM | Match: False | Date of execution: 11/06/2024 22:09:07
+[RESULT] Real user: 1 | Predicted user: 1 | Algorithm: HMM | Match: True | Date of execution: 11/06/2024 22:09:07
+[RESULT] Real user: 4 | Predicted user: 4 | Algorithm: SVM | Match: True | Date of execution: 11/06/2024 22:14:55
+[RESULT] Real user: 4 | Predicted user: 3 | Algorithm: KNN Manhattan | Match: False | Date of execution: 11/06/2024 22:14:55
+[RESULT] Real user: 4 | Predicted user: 3 | Algorithm: KNN Euclidean | Match: False | Date of execution: 11/06/2024 22:14:55
+[RESULT] Real user: 4 | Predicted user: 1 | Algorithm: LSTM | Match: False | Date of execution: 11/06/2024 22:14:55
+[RESULT] Real user: 4 | Predicted user: 1 | Algorithm: HMM | Match: False | Date of execution: 11/06/2024 22:14:55
+[RESULT] Real user: 2 | Predicted user: 3 | Algorithm: SVM | Match: False | Date of execution: 11/06/2024 22:10:05
+[RESULT] Real user: 2 | Predicted user: 3 | Algorithm: KNN Manhattan | Match: False | Date of execution: 11/06/2024 22:10:05
+[RESULT] Real user: 2 | Predicted user: 3 | Algorithm: KNN Euclidean | Match: False | Date of execution: 11/06/2024 22:10:05
+[RESULT] Real user: 2 | Predicted user: 3 | Algorithm: LSTM | Match: False | Date of execution: 11/06/2024 22:10:05
+[RESULT] Real user: 2 | Predicted user: 1 | Algorithm: HMM | Match: False | Date of execution: 11/06/2024 22:10:05
+[RESULT] Real user: 3 | Predicted user: 3 | Algorithm: SVM | Match: True | Date of execution: 11/06/2024 22:12:08
+[RESULT] Real user: 3 | Predicted user: 3 | Algorithm: KNN Manhattan | Match: True | Date of execution: 11/06/2024 22:12:08
+[RESULT] Real user: 3 | Predicted user: 3 | Algorithm: KNN Euclidean | Match: True | Date of execution: 11/06/2024 22:12:08
+[RESULT] Real user: 3 | Predicted user: 2 | Algorithm: LSTM | Match: False | Date of execution: 11/06/2024 22:12:08
+[RESULT] Real user: 3 | Predicted user: 1 | Algorithm: HMM | Match: False | Date of execution: 11/06/2024 22:12:08
+[RESULT] Real user: 5 | Predicted user: 1 | Algorithm: SVM | Match: False | Date of execution: 11/06/2024 22:12:50
+[RESULT] Real user: 5 | Predicted user: 1 | Algorithm: KNN Manhattan | Match: False | Date of execution: 11/06/2024 22:12:50
+[RESULT] Real user: 5 | Predicted user: 1 | Algorithm: KNN Euclidean | Match: False | Date of execution: 11/06/2024 22:12:50
+[RESULT] Real user: 5 | Predicted user: 4 | Algorithm: LSTM | Match: False | Date of execution: 11/06/2024 22:12:50
+[RESULT] Real user: 5 | Predicted user: 1 | Algorithm: HMM | Match: False | Date of execution: 11/06/2024 22:12:50
+[RESULT] Real user: 5 | Predicted user: 3 | Algorithm: SVM | Match: False | Date of execution: 11/06/2024 22:13:25
+[RESULT] Real user: 5 | Predicted user: 3 | Algorithm: KNN Manhattan | Match: False | Date of execution: 11/06/2024 22:13:25
+[RESULT] Real user: 5 | Predicted user: 3 | Algorithm: KNN Euclidean | Match: False | Date of execution: 11/06/2024 22:13:25
+[RESULT] Real user: 5 | Predicted user: 5 | Algorithm: LSTM | Match: True | Date of execution: 11/06/2024 22:13:25
+[RESULT] Real user: 5 | Predicted user: 1 | Algorithm: HMM | Match: False | Date of execution: 11/06/2024 22:13:25
+[RESULT] Real user: 1 | Predicted user: 1 | Algorithm: SVM | Match: True | Date of execution: 11/06/2024 23:53:06
+[RESULT] Real user: 1 | Predicted user: 1 | Algorithm: KNN Manhattan | Match: True | Date of execution: 11/06/2024 23:53:06
+[RESULT] Real user: 1 | Predicted user: 1 | Algorithm: KNN Euclidean | Match: True | Date of execution: 11/06/2024 23:53:06
+[RESULT] Real user: 1 | Predicted user: 4 | Algorithm: LSTM | Match: False | Date of execution: 11/06/2024 23:53:06
+[RESULT] Real user: 1 | Predicted user: 1 | Algorithm: HMM | Match: True | Date of execution: 11/06/2024 23:53:06
+
+[INFO] Server online at 12/06/2024 23:49:51
+
+[INFO] Server online at 12/06/2024 23:49:52
+
+[INFO] Server online at 13/06/2024 00:17:50
+
+[INFO] Server online at 13/06/2024 00:17:52
+
+[INFO] Server online at 13/06/2024 00:18:48
+
+[INFO] Server online at 13/06/2024 00:18:50
+
+[INFO] Server online at 13/06/2024 00:19:26
+
+[INFO] Server online at 13/06/2024 00:19:28
+
+[INFO] Server online at 13/06/2024 19:29:50
+
+[INFO] Server online at 13/06/2024 19:29:52
+
+[INFO] Server online at 13/06/2024 23:51:42
+
+[INFO] Server online at 13/06/2024 23:51:44
+
+[INFO] Server online at 13/06/2024 23:52:44
+
+[INFO] Server online at 13/06/2024 23:52:46
+[RESULT] Real user: 1 | Predicted user: 1 | Algorithm: SVM | Match: True | Date of execution: 13/06/2024 23:53:06
+[RESULT] Real user: 1 | Predicted user: 1 | Algorithm: KNN Manhattan | Match: True | Date of execution: 13/06/2024 23:53:06
+[RESULT] Real user: 1 | Predicted user: 1 | Algorithm: KNN Euclidean | Match: True | Date of execution: 13/06/2024 23:53:06
+[RESULT] Real user: 1 | Predicted user: 5 | Algorithm: LSTM | Match: False | Date of execution: 13/06/2024 23:53:06
+[RESULT] Real user: 1 | Predicted user: 1 | Algorithm: HMM | Match: True | Date of execution: 13/06/2024 23:53:06
+
+[INFO] Server online at 14/06/2024 18:52:35
+
+[INFO] Server online at 14/06/2024 18:52:37
+
+[INFO] Server online at 19/06/2024 19:53:36
+
+[INFO] Server online at 19/06/2024 19:53:38
+[RESULT] Real user: 1 | Predicted user: 1 | Algorithm: SVM | Match: True | Date of execution: 19/06/2024 19:53:59
+[RESULT] Real user: 1 | Predicted user: 1 | Algorithm: KNN Manhattan | Match: True | Date of execution: 19/06/2024 19:53:59
+[RESULT] Real user: 1 | Predicted user: 3 | Algorithm: KNN Euclidean | Match: False | Date of execution: 19/06/2024 19:53:59
+[RESULT] Real user: 1 | Predicted user: 5 | Algorithm: LSTM | Match: False | Date of execution: 19/06/2024 19:53:59
+[RESULT] Real user: 1 | Predicted user: 1 | Algorithm: HMM | Match: True | Date of execution: 19/06/2024 19:53:59
+
+[INFO] Server online at 19/06/2024 19:59:19
+
+[INFO] Server online at 19/06/2024 19:59:21
+[RESULT] Real user: 1 | Predicted user: 1 | Algorithm: SVM | Match: True | Date of execution: 19/06/2024 19:59:39
+[RESULT] Real user: 1 | Predicted user: 1 | Algorithm: KNN Manhattan | Match: True | Date of execution: 19/06/2024 19:59:39
+[RESULT] Real user: 1 | Predicted user: 3 | Algorithm: KNN Euclidean | Match: False | Date of execution: 19/06/2024 19:59:39
+[RESULT] Real user: 1 | Predicted user: 2 | Algorithm: LSTM | Match: False | Date of execution: 19/06/2024 19:59:39
+[RESULT] Real user: 1 | Predicted user: 1 | Algorithm: HMM | Match: True | Date of execution: 19/06/2024 19:59:39
+
+[INFO] Server online at 19/06/2024 20:01:17
+
+[INFO] Server online at 19/06/2024 20:01:19
+[RESULT] Real user: 1 | Predicted user: 1 | Algorithm: SVM | Match: True | Date of execution: 19/06/2024 20:01:38
+[RESULT] Real user: 1 | Predicted user: 1 | Algorithm: KNN Manhattan | Match: True | Date of execution: 19/06/2024 20:01:38
+[RESULT] Real user: 1 | Predicted user: 3 | Algorithm: KNN Euclidean | Match: False | Date of execution: 19/06/2024 20:01:38
+[RESULT] Real user: 1 | Predicted user: 2 | Algorithm: LSTM | Match: False | Date of execution: 19/06/2024 20:01:38
+[RESULT] Real user: 1 | Predicted user: 1 | Algorithm: HMM | Match: True | Date of execution: 19/06/2024 20:01:38
+
+[INFO] Server online at 19/06/2024 20:04:24
+
+[INFO] Server online at 19/06/2024 20:04:26
+[RESULT] Real user: 1 | Predicted user: 1 | Algorithm: SVM | Match: True | Date of execution: 19/06/2024 20:04:46
+[RESULT] Real user: 1 | Predicted user: 1 | Algorithm: KNN Manhattan | Match: True | Date of execution: 19/06/2024 20:04:46
+[RESULT] Real user: 1 | Predicted user: 3 | Algorithm: KNN Euclidean | Match: False | Date of execution: 19/06/2024 20:04:46
+[RESULT] Real user: 1 | Predicted user: 4 | Algorithm: LSTM | Match: False | Date of execution: 19/06/2024 20:04:46
+[RESULT] Real user: 1 | Predicted user: 1 | Algorithm: HMM | Match: True | Date of execution: 19/06/2024 20:04:46
+
+[INFO] Server online at 23/06/2024 14:47:01
+
+[INFO] Server online at 23/06/2024 14:47:04
+
+[INFO] Server online at 23/06/2024 14:49:22
+
+[INFO] Server online at 23/06/2024 14:49:25
+[RESULT] Real user: 1 | Predicted user: 1 | Algorithm: SVM | Match: True | Date of execution: 23/06/2024 14:49:45
+[RESULT] Real user: 1 | Predicted user: 1 | Algorithm: KNN Manhattan | Match: True | Date of execution: 23/06/2024 14:49:45
+[RESULT] Real user: 1 | Predicted user: 1 | Algorithm: KNN Euclidean | Match: True | Date of execution: 23/06/2024 14:49:45
+[RESULT] Real user: 1 | Predicted user: 5 | Algorithm: LSTM | Match: False | Date of execution: 23/06/2024 14:49:45
+[RESULT] Real user: 1 | Predicted user: 1 | Algorithm: HMM | Match: True | Date of execution: 23/06/2024 14:49:45
+
+[INFO] Server online at 25/06/2024 22:00:30
+
+[INFO] Server online at 25/06/2024 22:01:35
+
+[INFO] Server online at 25/06/2024 22:01:36
+
+[INFO] Server online at 25/06/2024 23:13:50
+
+[INFO] Server online at 25/06/2024 23:13:52
+
+[INFO] Server online at 26/06/2024 10:59:29
+
+[INFO] Server online at 26/06/2024 10:59:32
+[RESULT] Real user: 1 | Predicted user: 1 | Algorithm: SVM | Match: True | Date of execution: 26/06/2024 11:00:00
+[RESULT] Real user: 1 | Predicted user: 1 | Algorithm: KNN Manhattan | Match: True | Date of execution: 26/06/2024 11:00:00
+[RESULT] Real user: 1 | Predicted user: 3 | Algorithm: KNN Euclidean | Match: False | Date of execution: 26/06/2024 11:00:00
+[RESULT] Real user: 1 | Predicted user: 3 | Algorithm: LSTM | Match: False | Date of execution: 26/06/2024 11:00:00
+[RESULT] Real user: 1 | Predicted user: 1 | Algorithm: HMM | Match: True | Date of execution: 26/06/2024 11:00:00
+[RESULT] Real user: 1 | Predicted user: 1 | Algorithm: SVM | Match: True | Date of execution: 26/06/2024 11:01:14
+[RESULT] Real user: 1 | Predicted user: 1 | Algorithm: KNN Manhattan | Match: True | Date of execution: 26/06/2024 11:01:14
+[RESULT] Real user: 1 | Predicted user: 3 | Algorithm: KNN Euclidean | Match: False | Date of execution: 26/06/2024 11:01:14
+[RESULT] Real user: 1 | Predicted user: 2 | Algorithm: LSTM | Match: False | Date of execution: 26/06/2024 11:01:14
+[RESULT] Real user: 1 | Predicted user: 1 | Algorithm: HMM | Match: True | Date of execution: 26/06/2024 11:01:14
+
+[INFO] Server online at 26/06/2024 12:02:25
+
+[INFO] Server online at 26/06/2024 12:02:26
+[RESULT] Real user: 1 | Predicted user: 2 | Algorithm: SVM | Match: False | Date of execution: 26/06/2024 12:03:05
+[RESULT] Real user: 1 | Predicted user: 1 | Algorithm: KNN Manhattan | Match: True | Date of execution: 26/06/2024 12:03:05
+[RESULT] Real user: 1 | Predicted user: 1 | Algorithm: KNN Euclidean | Match: True | Date of execution: 26/06/2024 12:03:05
+[RESULT] Real user: 1 | Predicted user: 3 | Algorithm: LSTM | Match: False | Date of execution: 26/06/2024 12:03:05
+[RESULT] Real user: 1 | Predicted user: 1 | Algorithm: HMM | Match: True | Date of execution: 26/06/2024 12:03:05
+[RESULT] Real user: 1 | Predicted user: 2 | Algorithm: SVM | Match: False | Date of execution: 26/06/2024 12:03:44
+[RESULT] Real user: 1 | Predicted user: 1 | Algorithm: KNN Manhattan | Match: True | Date of execution: 26/06/2024 12:03:44
+[RESULT] Real user: 1 | Predicted user: 1 | Algorithm: KNN Euclidean | Match: True | Date of execution: 26/06/2024 12:03:44
+[RESULT] Real user: 1 | Predicted user: 3 | Algorithm: LSTM | Match: False | Date of execution: 26/06/2024 12:03:44
+[RESULT] Real user: 1 | Predicted user: 1 | Algorithm: HMM | Match: True | Date of execution: 26/06/2024 12:03:44
+
+[INFO] Server online at 26/06/2024 12:52:22
+
+[INFO] Server online at 26/06/2024 12:52:24
+[RESULT] Real user: 1 | Predicted user: 2 | Algorithm: SVM | Match: False | Date of execution: 26/06/2024 12:53:07
+[RESULT] Real user: 1 | Predicted user: 1 | Algorithm: KNN Manhattan | Match: True | Date of execution: 26/06/2024 12:53:07
+[RESULT] Real user: 1 | Predicted user: 1 | Algorithm: KNN Euclidean | Match: True | Date of execution: 26/06/2024 12:53:07
+[RESULT] Real user: 1 | Predicted user: 3 | Algorithm: LSTM | Match: False | Date of execution: 26/06/2024 12:53:07
+[RESULT] Real user: 1 | Predicted user: 1 | Algorithm: HMM | Match: True | Date of execution: 26/06/2024 12:53:07
+
+[INFO] Server online at 26/06/2024 13:58:01
+
+[INFO] Server online at 26/06/2024 13:58:03
+[RESULT] Real user: 1 | Predicted user: 2 | Algorithm: SVM | Match: False | Date of execution: 26/06/2024 13:59:19
+[RESULT] Real user: 1 | Predicted user: 1 | Algorithm: KNN Manhattan | Match: True | Date of execution: 26/06/2024 13:59:19
+[RESULT] Real user: 1 | Predicted user: 2 | Algorithm: KNN Euclidean | Match: False | Date of execution: 26/06/2024 13:59:19
+[RESULT] Real user: 1 | Predicted user: 2 | Algorithm: LSTM | Match: False | Date of execution: 26/06/2024 13:59:19
+[RESULT] Real user: 1 | Predicted user: 1 | Algorithm: HMM | Match: True | Date of execution: 26/06/2024 13:59:19

@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <link rel="icon" href="static/img/favicon.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>KsDynAUTH - Login</title>
+    <!-- Google Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Bootstrap core CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="static/css/style.css" rel="stylesheet">
+    <!-- JQuery -->
+    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js" type="text/javascript"></script>
+    <style>
+        .centered-message {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            z-index: 9999;
+        }
+        .overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black */
+            z-index: 9998;
+        }
+        .overlay.green-background {
+            background-color: rgba(34, 139, 34, 1);
+        }
+        .overlay.red-background {
+            background-color: rgba(178, 34, 34, 1);
+        }
+        .show-results-btn {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body class="text-center">
+
+<span type="button" onclick="window.location.href = '/'" class="material-icons">arrow_back_ios</span>
+
+<!-- Overlay background -->
+<div id="overlay" class="overlay"></div>
+
+<!-- Centered message container -->
+<div id="centered-message" class="centered-message">
+    <span id="status-icon" class="material-icons" style="font-size: 100px;"></span>
+    <br>
+    <button id="show-results-btn" class="btn btn-primary show-results-btn" onclick="showResults()">Show results</button>
+</div>
+
+<!--==================================================================== AUTH 1 ====================================================================-->
+<div class='form' style="display:block;">
+    <form class="form-register">
+        <img class="mb-4" src="{{ url_for('static', filename='img/logo.png') }}" alt="" width="400" height="400">
+        <h1 class="h3 mb-3 font-weight-normal text-primary">Login</h1>
+
+        <label for="username" class="sr-only">Username</label>
+        <input type="text" id="username" class="form-control" placeholder="Type your username here..."
+               data-toggle="tooltip"
+               data-placement="top">
+
+        <label for="password" class="sr-only">Password</label>
+        <input type="password" id="password" class="form-control" placeholder="Type your password here..." required="">
+        <button id="btn_register1" type="button" onclick="login_auth1()" class="mb-3 btn btn-lg btn-primary btn-block">
+            Login
+        </button>
+        <p class="mt-5 mb-3 text-muted">Cojocaru Bogdan-Andrei, 10LF311</p>
+    </form>
+</div>
+
+<!--==================================================================== AUTH 2 ====================================================================-->
+<div class='typing-form mt-5 mb-3' style="display:none;">
+    <h1 class="h3 mb-3 font-weight-normal text-primary">Confirm your identity using 2FA</h1>
+    <h2>Type the following sentence:</h2>
+    <div id='text_color' style="color: black; font-style: italic;">
+        <h3>"the quick brown fox jumps over the lazy dog"</h3>
+    </div>
+    <textarea onkeydown="keyDown();" onkeyup="keyUp();" type="text" class="form-control" id="input_text"
+              placeholder="Type here..." cols="20" rows="3"></textarea>
+    <button id="btn_register2" disabled type="button" onclick="login_auth2()"
+            class="mb-3 btn btn-lg btn-primary btn-block">Login
+    </button>
+    <h6 class="h6 mb-3 font-weight-normal text-danger">NOTE</h6>
+    <h6 class="font-weight-normal">Typing errors are not allowed, refresh the page or hit F5 to try again.</h6>
+</div>
+
+<!--==================================================================== RESULTS ====================================================================-->
+<div class='auth2_success_msg' style="display:none;">
+    <h3>User trying to access: </h3>
+    <div class="auth2_user_id"></div>
+    <h3>Algorithm results:</h3>
+    <div class="algorithm_results"></div>
+</div>
+
+<div class='auth1_msg_notexist alert alert-warning' role="alert" style="display:none;">
+    <h1>User not registered.</h1>
+</div>
+
+<div class='auth1_msg_passfail alert alert-danger' role="alert" style="display:none;">
+    <h1>Wrong password. Try again.</h1>
+</div>
+
+<!--==================================================================== SCRIPTS ====================================================================-->
+<script type="text/javascript">
+    var user_id;
+    var typing_data;
+    var digital_pattern = [];
+    var input_text;
+    var sample_text = "the quick brown fox jumps over the lazy dog";
+    const register_button = document.getElementById("btn_register2");
+    const auth2_success_msg = document.querySelector(".auth2_success_msg");
+    const auth1_msg_notexist = document.querySelector(".auth1_msg_notexist");
+    const auth1_msg_passfail = document.querySelector(".auth1_msg_passfail");
+    const form = document.querySelector('.form');
+    const typing_form = document.querySelector('.typing-form');
+    const auth2_user_id = document.querySelector('.auth2_user_id');
+    const algorithm_results = document.querySelector('.algorithm_results');
+    const centered_message = document.getElementById('centered-message');
+    const status_icon = document.getElementById('status-icon');
+    const show_results_btn = document.getElementById('show-results-btn');
+    const overlay = document.getElementById('overlay');
+
+    function login_auth1() {
+        $.ajax({
+            type: 'POST',
+            url: window.location.href + '/auth1',
+            contentType: 'application/json; charset=UTF-8',
+            data: JSON.stringify({'username': username.value, 'password': password.value}),
+            dataType: 'json',
+            success: function (rdata) {
+                if (rdata['auth1_code'] == 'success') {
+                    user_id = rdata['id_user']
+                    auth1_msg_passfail.style.display = 'none'
+                    auth1_msg_notexist.style.display = 'none'
+                    typing_form.style.display = 'block'
+                    form.style.display = 'none'
+                } else if (rdata['auth1_code'] == 'UsernameNotExist') {
+                    auth1_msg_passfail.style.display = 'none'
+                    auth1_msg_notexist.style.display = 'block'
+                } else if (rdata['auth1_code'] == 'PasswordIsWrong') {
+                    auth1_msg_notexist.style.display = 'none'
+                    auth1_msg_passfail.style.display = 'block'
+                }
+            }
+        });
+    }
+
+    var ref = 0;
+    var ref2 = 1;
+    var biometric_data = [];
+
+    function keyDown() {
+        time_1 = Date.now();
+        if (ref == 1) {
+            hold_time2 = (time_2 - time_1) / 1000;
+            biometric_data.push(hold_time2);
+            verifyText();
+        }
+        flightTime(time_1);
+    }
+
+    function keyUp() {
+        time_2 = Date.now();
+        hold_time1 = (time_1 - time_2) / 1000;
+        biometric_data.push(hold_time1);
+        ref = 1;
+        verifyText();
+    }
+
+    function flightTime(time) {
+        if (ref2 == 1) {
+            flight_time_init = time;
+            ref2 = 0;
+        } else {
+            flight_time_final = time;
+            flight_time = (flight_time_init - flight_time_final) / 1000;
+            ref2 = 1;
+        }
+    }
+
+    function verifyText() {
+        var key = event.keyCode || event.charCode;
+        if (key == 8) {
+            window.location.reload(false);
+        }
+        console.log(biometric_data);
+        input_text = document.getElementById("input_text").value;
+        if (sample_text == input_text) {
+            document.getElementById("text_color").style.color = "#19e030";
+            register_button.disabled = false;
+            console.log('Text input correct');
+            console.log(biometric_data);
+        } else {
+            document.getElementById("text_color").style.color = "black";
+            register_button.disabled = true;
+        }
+    }
+
+    function login_auth2() {
+        showLoadingScreen();
+
+        typing_form.style.display = 'none';
+        auth2_success_msg.style.display = 'block';
+
+        $.ajax({
+            type: 'POST',
+            url: window.location.href + '/auth2',
+            contentType: 'application/json; charset=UTF-8',
+            data: JSON.stringify({'typing_data': biometric_data, 'user_id': user_id}),
+            dataType: 'json',
+            success: function (rdata) {
+                hideLoadingScreen();
+
+                if (rdata.needRefresh) {
+                    alert("There was an error while recording the biometric data. The page will now refresh.");
+                    window.location.reload();
+                } else {
+                    typing_form.style.display = 'none';
+                    form.style.display = 'none';
+
+                    auth2_user_id.innerHTML = rdata['user_id'];
+
+                    let matchCount = 0;
+                    for (let alg in rdata) {
+                        if (alg !== 'user_id') {
+                            const result = rdata[alg];
+                            const resultContainer = document.createElement('div');
+                            resultContainer.classList.add('result-container');
+
+                            let resultHTML = `
+                                <h4>${alg.toUpperCase()}</h4>
+                                <p>Predicted: ${result.prediction}</p>
+                                <p>Match: ${result.match ? '<span class="material-icons" style="color: green;">check_circle</span>' : '<span class="material-icons" style="color: red;">cancel</span>'}</p>
+                            `;
+                            resultContainer.innerHTML = resultHTML;
+
+                            algorithm_results.appendChild(resultContainer);
+
+                            if (result.match) {
+                                matchCount++;
+                            }
+                        }
+                    }
+
+                    if (matchCount > 2) {
+                        overlay.classList.add('green-background');
+                        status_icon.textContent = 'check_circle';
+                    } else {
+                        overlay.classList.add('red-background');
+                        status_icon.textContent = 'cancel';
+                    }
+                    overlay.style.display = 'block';
+                    centered_message.style.display = 'block';
+                }
+            },
+            error: function (jqXHR, textStatus, errorThrown) {
+                hideLoadingScreen();
+                console.error("Error during AJAX request:", textStatus, errorThrown);
+            }
+        });
+    }
+
+    function showResults() {
+        centered_message.style.display = 'none';
+        overlay.style.display = 'none';
+        auth2_success_msg.style.display = 'block';
+    }
+
+    function showLoadingScreen() {
+        const loadingOverlay = document.createElement('div');
+        loadingOverlay.id = 'loading-overlay';
+        loadingOverlay.classList.add('loading-overlay');
+
+        const spinnerContainer = document.createElement('div');
+        spinnerContainer.classList.add('spinner-container');
+
+        // Create/loading spinner
+        const loadingSpinner = document.createElement('div');
+        loadingSpinner.classList.add('spinner-border', 'text-primary');
+        loadingSpinner.setAttribute('role', 'status');
+
+        // Append loading spinner to spinner container
+        spinnerContainer.appendChild(loadingSpinner);
+
+        // Create/loading text
+        const loadingText = document.createElement('div');
+        loadingText.classList.add('loading-text');
+        loadingText.textContent = 'Loading...';
+
+        // Append loading text to spinner container
+        spinnerContainer.appendChild(loadingText);
+
+        // Append spinner container to loading screen overlay
+        loadingOverlay.appendChild(spinnerContainer);
+
+        // Append loading screen overlay to body
+        document.body.appendChild(loadingOverlay);
+
+        // Apply CSS to center the loading spinner
+        spinnerContainer.style.position = 'fixed';
+        spinnerContainer.style.top = '50%';
+        spinnerContainer.style.left = '50%';
+        spinnerContainer.style.transform = 'translate(-50%, -50%)';
+        spinnerContainer.style.textAlign = 'center';
+        spinnerContainer.style.zIndex = 9999; // Ensure it's on top of everything
+
+        // Apply CSS to cover the entire viewport
+        loadingOverlay.style.position = 'fixed';
+        loadingOverlay.style.top = 0;
+        loadingOverlay.style.left = 0;
+        loadingOverlay.style.width = '100%';
+        loadingOverlay.style.height = '100%';
+        loadingOverlay.style.backgroundColor = 'rgba(34, 34, 34, 1)'; // Background color set to opaque black (RGBA: 34, 34, 34, 1)
+        loadingOverlay.style.zIndex = 9998; // Place it below the spinner container
+    }
+
+
+    // Function to hide loading screen
+    function hideLoadingScreen() {
+        // Find and remove loading screen overlay from the DOM
+        const loadingOverlay = document.getElementById('loading-overlay');
+        if (loadingOverlay) {
+            loadingOverlay.parentNode.removeChild(loadingOverlay);
+        }
+    }
+</script>
+</body>
+</html>
