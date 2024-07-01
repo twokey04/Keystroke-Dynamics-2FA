@@ -1,0 +1,109 @@
+body {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  background-color: #222;
+  color: #fff;
+}
+
+.form-signin {
+  width: 100%;
+  max-width: 330px;
+  padding: 15px;
+  margin: 0 auto;
+  background-color: #333; /* Darker background color for the form */
+  border-radius: 10px; /* Rounded corners for the form */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Box shadow for a lifted effect */
+}
+.form-signin .checkbox {
+  font-weight: 400;
+  color: #fff;
+}
+.form-signin .form-control {
+  position: relative;
+  box-sizing: border-box;
+  height: auto;
+  padding: 10px;
+  font-size: 16px;
+  background-color: #444; /* Darker background color for form inputs */
+  border: none; /* Remove borders */
+  color: #fff; /* Light text color */
+}
+.form-signin .form-control:focus {
+  z-index: 2;
+}
+.form-signin input[type="email"] {
+  margin-bottom: -1px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.form-signin input[type="password"] {
+  margin-bottom: 10px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+.btn-yellow {
+  background-color: yellow;
+  color: black;
+}
+.btn-yellow:hover {
+  background-color: #ffc107;
+  color: black;
+}
+
+.alert {
+  width: 100%;
+  max-width: 330px;
+  padding: 15px;
+  margin: 10px auto;
+  border-radius: 10px;
+  background-color: #444;
+  color: #fff;
+}
+
+.alert h1 {
+  margin: 0;
+  font-size: 18px;
+}
+
+.alert h3 {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.alert .auth2_user_id,
+.alert .auth2_predict,
+.alert .auth2_acc,
+.alert .auth2_alg,
+.alert .auth2_result {
+  color: #fff;
+}
+
+.auth2_success_msg {
+  display: none;
+  background-color: #333;
+  padding: 20px;
+  border-radius: 10px;
+  margin-top: 20px;
+  color: #fff;
+}
+
+.auth2_success_msg h3 {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.auth2_success_msg .auth2_user_id,
+.auth2_success_msg .auth2_predict,
+.auth2_success_msg .auth2_acc,
+.auth2_success_msg .auth2_alg,
+.auth2_success_msg .auth2_result {
+  color: #fff;
+}
+
+.accuracy_icon .material-icons {
+  font-size: 72px;
+}
